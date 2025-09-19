@@ -1,0 +1,11 @@
+{% extends "base.html" %} 
+{% block content %}
+<section class="flex flex-col items-center">
+  <h2 class="text-4xl">Score</h2>
+  <p class="text-3xl">{{score}}/{{total_question}}</p>
+  <a href="" class="bg-blue-500 px-5 py-2 text-white font-medium rounded"
+    >Try again</a
+  >
+</section>
+
+{% endblock %}
