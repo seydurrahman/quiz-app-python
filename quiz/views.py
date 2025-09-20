@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Question, Choice
 
+
 def quiz(request):
     questions = Question.objects.all().prefetch_related("choices")
 
@@ -13,9 +14,10 @@ def quiz(request):
                 if correct:
                     score += 1
 
-        return render(request, "quiz/score.html", context={
-            "total_question": questions.count(),
-            "score": score
-        })
+        return render(
+            request,
+            "quiz/score.html",
+            context={"total_question": questions.count(), "score": score},
+        )
 
     return render(request, "quiz/quiz.html", context={"questions": questions})
