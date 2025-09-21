@@ -1,7 +1,6 @@
 {% extends "base.html" %} 
 {% block content %}
 <section class=" max-w-96 p-10 mx-auto flex flex-col items-center gap-4 shadow-xl rounded">
-  {{% csrf_token %}}
   <h2 class="text-4xl">Score</h2>
   <p class="text-3xl">{{score}}/{{total_question}}</p>
   <a href="{% url "quiz" %}" class="bg-blue-500 px-5 py-2 text-white font-medium rounded-xl"
