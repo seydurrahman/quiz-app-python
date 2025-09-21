@@ -27,6 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["quiz-app-python.onrender.com"]
 
+# settings.py
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://quiz-app-python.onrender.com",
+]
+
+
 
 # Application definition
 
